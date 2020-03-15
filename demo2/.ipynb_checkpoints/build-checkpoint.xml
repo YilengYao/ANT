@@ -1,0 +1,8 @@
+<project name="text" default="text" basedir=".">
+    <property name="x" value="10"/>
+    <property name="srcdir" value="source"/>
+    <property name="builddir" value="source"/>
+    <target name="text">
+        <echo>x value is ${x}</echo>
+    </target>
+</project>
