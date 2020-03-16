@@ -1,0 +1,17 @@
+<project name="test" default="test" basedir=".">
+    <target name="test">
+        <echo>File system tasks</echo>
+        <mkdir dir="build/classes"/>
+        <mkdir dir="src"/>
+        <delete dir="build"/>
+        <delete file="myManifest"/>
+        <copy file="Hi.txt" tofile="Hello.txt"/>
+        <copy file="Hi.txt" todir="build"/>
+        <copy todir="build">
+            <fileset dir="src">
+                <include name="*.java"/>
+            </fileset>
+        </copy>
+        <move file="Hi.txt" todir="build"/>
+    </target>
+</project>
